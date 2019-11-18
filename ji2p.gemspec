@@ -17,9 +17,9 @@ Gem::Specification.new do |s|
   s.metadata['allowed_push_host'] = 'https://rubygems.org'
   s.platform = Gem::Platform.new %w[jruby]
   # Runtime dependencies
-  s.add_runtime_dependency 'activesupport', '~> 0'
-  s.add_runtime_dependency 'httparty', '~> 0'
-  s.add_runtime_dependency 'activerecord', '~> 0'
+  s.add_runtime_dependency 'activesupport', '>= 4.1.11'
+  s.add_runtime_dependency 'httparty', '>= 0.10.0'
+  s.add_runtime_dependency 'activerecord', '>= 3.0.18'
   s.add_runtime_dependency 'activerecord-jdbc-adapter', '~> 0'
   s.add_runtime_dependency 'activerecord-jdbcsqlite3-adapter', '~> 0'
   s.add_runtime_dependency 'dbi', '~> 0'
