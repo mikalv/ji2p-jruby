@@ -30,6 +30,8 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'jruby-rack', '~> 0'
   s.add_runtime_dependency 'rack', '~> 1.5.2'
   s.add_runtime_dependency 'jar-dependencies', '~> 0'
+  #s.add_runtime_dependency 'activerecord-jdbcpostgresql-adapter', '~> 0'
+  #s.add_runtime_dependency 'ed25519', '~> 1.2.4'
 
   # JARs
   s.requirements << "jar net.i2p.client, streaming, #{i2p_version}"

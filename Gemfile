@@ -4,6 +4,8 @@ ruby '2.5.7', :engine => 'jruby', :engine_version => '9.2.9'
 
 gemspec
 
+
+gem 'celluloid'
 #gem 'websocket-driver'
 #gem 'faye'
 #gem 'faye-websocket'
