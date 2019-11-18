@@ -6,7 +6,7 @@
 
 Gemfile:
 ```
-gem 'ji2p', '~> 0.0.1'
+gem 'ji2p', '~> 0.0.2'
 ```
 
 CLI:
