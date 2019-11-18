@@ -1,0 +1,13 @@
+---
+runtime:
+  router_client: true
+  host_router: false
+
+router_runtime:
+  socket_manager_impl: net.i2p.client.streaming.impl.I2PSocketManagerFull
+
+database:
+  host: 'localhost'
+  adapter: 'postgresql'
+  encoding: utf-8
+  database: 'test'
