@@ -1,5 +1,19 @@
 # Ji2p - JRuby library
 
+## Installation
+
+**Note:** This is a JRuby only gem, it depends on java.
+
+Gemfile:
+```
+gem 'ji2p', '~> 0.0.1'
+```
+
+CLI:
+```
+jgem install ji2p
+```
+
 ## Examples
 
 ### Generate / Load destination and private key
@@ -34,4 +48,8 @@ puts "Your destination: #{kp.dest.base32}"
 server.run
 ```
 
+## TODOs?
+
+* Consider splitting up database code to a sub-gem
+* Complete clustering support
 
