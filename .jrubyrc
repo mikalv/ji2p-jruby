@@ -1,0 +1,54 @@
+#log.exceptions=true
+#log.backtraces=true
+#log.callers=true
+#errno.backtrace=true
+
+# Dump to console all bytecode generated at runtime.
+# Options: [true, false], Default: false.
+
+#compile.dump=false
+
+# Compile with all "mostly harmless" compiler optimizations.
+# Options: [true, false], Default: false.
+
+#compile.fastest=false
+
+# Use invokedynamic for optimizing Ruby code.
+# Options: [true, false], Default: false.
+
+#compile.invokedynamic=false
+
+# Set compilation mode. JIT = at runtime; FORCE = before execution.
+# Options: [JIT, FORCE, OFF], Default: JIT.
+
+#compile.mode=JIT
+
+# Enable or disable ObjectSpace.each_object.
+# Options: [true, false], Default: false.
+
+#objectspace.enabled=false
+
+# Look for .class before .rb to load AOT-compiled code
+# Options: [true, false], Default: false.
+
+#aot.loadClasses=false
+
+# Use java.lang.reflect.Proxy for interface impl.
+# Options: [true, false], Default: false.
+
+#interfaces.useProxy=false
+
+# Load Java support (class extensions) lazily on demand or ahead of time.
+# Options: [true, false], Default: true.
+
+#ji.load.lazy=true
+
+# Try to set inaccessible Java methods to be accessible.
+# Options: [true, false], Default: true.
+
+#ji.setAccessible=true
+
+
+cli.rubygems.enable=true
+cli.rubyopt.enable=true
+
