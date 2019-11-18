@@ -30,7 +30,7 @@ kp = Ji2p::Control::Keypair.load_from_stream! stream
 
 ```
 
-### Rack HTTP Proxy
+### Rack HTTP Server
 
 ```ruby
 require 'ji2p'
