@@ -5,7 +5,7 @@ ruby '2.5.7', :engine => 'jruby', :engine_version => '9.2.9'
 gemspec
 
 
-gem 'celluloid'
+#gem 'celluloid'
 gem 'concurrent-ruby', require: 'concurrent'
 gem 'concurrent-ruby-edge', require: 'concurrent-edge'
 

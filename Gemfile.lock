@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ji2p (0.0.3-java)
+    ji2p (0.0.4-universal-java-11)
       activerecord (>= 3.0.18)
       activerecord-jdbc-adapter (~> 0)
       activerecord-jdbcsqlite3-adapter (~> 0)
@@ -12,8 +12,11 @@ PATH
       httparty (>= 0.10.0)
       jar-dependencies (~> 0)
       jruby-rack (~> 0)
-      puma (~> 0)
-      rack (~> 1.5.2)
+      puma (~> 4.3)
+      rack (~> 2.0)
+      rake (~> 0)
+      sinatra (~> 2.0.7)
+      warbler (~> 0)
 
 GEM
   remote: https://rubygems.org/
@@ -43,23 +46,6 @@ GEM
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
     cd (1.0.1)
-    celluloid (0.17.4)
-      celluloid-essentials
-      celluloid-extras
-      celluloid-fsm
-      celluloid-pool
-      celluloid-supervision
-      timers (>= 4.1.1)
-    celluloid-essentials (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-extras (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-fsm (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-pool (0.20.5)
-      timers (>= 4.1.1)
-    celluloid-supervision (0.20.6)
-      timers (>= 4.1.1)
     clipboard (1.3.3)
     code (0.9.2)
       coderay (~> 1.1)
@@ -124,6 +110,8 @@ GEM
     minitest (5.13.0)
     multi_json (1.14.1)
     multi_xml (0.6.0)
+    mustermann (1.0.3)
+    nio4r (2.5.2-java)
     object_shadow (1.1.0)
     ori (0.1.0)
     os (1.0.1)
@@ -132,13 +120,11 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
       spoon (~> 0.0)
-    puma (0.9.5-java)
-      rack (>= 1.2, < 2.0)
-    rack (1.5.5)
-    rack-protection (1.5.5)
+    puma (4.3.0-java)
+      nio4r (~> 2.0)
+    rack (2.0.7)
+    rack-protection (2.0.7)
       rack
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
     rake (0.9.6)
     rspec (0.9.4)
     ruby-maven (3.3.12)
@@ -147,22 +133,22 @@ GEM
     ruby_engine (1.0.1)
     ruby_info (1.0.1)
     ruby_version (1.0.1)
-    sinatra (1.4.8)
-      rack (~> 1.5)
-      rack-protection (~> 1.4)
-      tilt (>= 1.3, < 3)
-    sinatra-contrib (1.4.7)
-      backports (>= 2.0)
+    sinatra (2.0.7)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.7)
+      tilt (~> 2.0)
+    sinatra-contrib (2.0.7)
+      backports (>= 2.8.2)
       multi_json
-      rack-protection
-      rack-test
-      sinatra (~> 1.4.0)
-      tilt (>= 1.3, < 3)
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.7)
+      sinatra (= 2.0.7)
+      tilt (~> 2.0)
     spoon (0.0.6)
       ffi
     thread_safe (0.3.6-java)
     tilt (2.0.10)
-    timers (4.3.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.6.0)
@@ -180,18 +166,15 @@ DEPENDENCIES
   awesome_print (~> 0)
   better_errors
   binding_of_caller
-  celluloid
   concurrent-ruby
   concurrent-ruby-edge
   irbtools (~> 3.0)
   ji2p!
   pry (~> 0)
-  rake (~> 0)
   rspec (~> 0)
   ruby-maven (~> 3.3)
   sinatra
   sinatra-contrib
-  warbler (~> 0)
 
 RUBY VERSION
    ruby 2.5.7p0 (jruby 9.2.9.0)
