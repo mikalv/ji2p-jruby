@@ -5,6 +5,7 @@ module Ji2p
     autoload :ClientManager, File.expand_path('control/client_manager.rb', __dir__)
     autoload :Dest, File.expand_path('control/dest.rb', __dir__)
     autoload :Keypair, File.expand_path('control/keypair.rb', __dir__)
+    autoload :SocketManager, File.expand_path('control/socket_manager.rb', __dir__)
     autoload :TunnelManager, File.expand_path('control/tunnel_manager.rb', __dir__)
 
     def self.unique_id
