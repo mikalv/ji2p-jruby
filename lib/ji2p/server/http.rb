@@ -30,8 +30,8 @@ module Ji2p::Server
 
       while matches = /\A(?<key>[^:]+):\s*(?<value>.+)#{CRLF}\Z/.match(hl = @socket.readline)
         case matches[:key]
-        when Rack::CONTENT_TYPE then env["CONTENT_TYPE"] = matches[:value]
-        when Rack::CONTENT_LENGTH then env["CONTENT_LENGTH"] = Integer(matches[:value])
+        when Rack::ContentType then env["CONTENT_TYPE"] = matches[:value]
+        when Rack::ContentLength then env["CONTENT_LENGTH"] = Integer(matches[:value])
         else env["HTTP_" + matches[:key].tr("-", "_").upcase] ||= matches[:value]
         end
       end
