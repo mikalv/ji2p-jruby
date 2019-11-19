@@ -7,7 +7,6 @@ module Ji2p::Control
   java_import 'net.i2p.client.I2PClientFactory'
   java_import 'net.i2p.client.streaming.I2PSocketManager'
   java_import 'net.i2p.client.streaming.I2PSocketManagerFactory'
-  java_import 'net.i2p.client.streaming.impl.I2PSocketManagerFull'
   java_import 'net.i2p.client.streaming.IncomingConnectionFilter'
   java_import 'java.util.Properties'
   java_import 'java.lang.Thread'
@@ -17,7 +16,7 @@ module Ji2p::Control
     def self.defineManager! name, kp, opts=Java::JavaUtil::Properties.new, filter=IncomingConnectionFilter::ALLOW
       ctx = I2PAppContext.getGlobalContext
       session = kp.createSession opts
-      new Java::NetI2pClientStreamingImpl::I2PSocketManagerFull.new(ctx,session,opts,name,filter)
+      new get_impl.new(ctx,session,opts,name,filter)
     end
 
     def connectTunnel
@@ -65,6 +64,10 @@ module Ji2p::Control
     end
 
     private
+
+    def self.get_impl
+      java_import('net.i2p.client.streaming.impl.I2PSocketManagerFull').first
+    end
 
     def initialize smgr
       @smgr = smgr
