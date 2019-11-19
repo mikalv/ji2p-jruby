@@ -24,5 +24,9 @@ end
 
 resource :directory => '.', :includes => [ 'bin/**', 'config/**', 'lib/**' ]
 
+use( :jruby_pack ) do
+  pack_jar
+end
+
 
 # vim: syntax=Ruby

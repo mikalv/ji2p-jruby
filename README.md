@@ -48,6 +48,47 @@ puts "Your destination: #{kp.dest.base32}"
 server.run
 ```
 
+**Supported servers/technologies:**
+* WEBrick
+* FCGI
+* CGI
+* SCGI
+* LiteSpeed
+* Thin
+* Agoo
+* Ebb
+* Fuzed
+* Glassfish v3
+* Phusion Passenger (which is mod_rack for Apache and for nginx)
+* Puma
+* vReel
+* unixrack
+* uWSGI
+
+However, any valid Rack app will run the same on all these handlers, without changing anything.
+
+**Frameworks that support rack:**
+* Camping
+* Coset
+* Espresso
+* Halcyon
+* Hanami
+* Mack
+* Maveric
+* Merb
+* Padrino
+* Racktools::SimpleApplication
+* Ramaze
+* Ruby on Rails
+* vRum
+* Sinatra
+* Sin
+* Vintage
+* WABuR
+* Waves
+* Wee
+* ... and many others.
+
 ## TODOs?
 
 * Consider splitting up database code to a sub-gem

@@ -48,5 +48,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sinatra', '~> 0'
   s.add_development_dependency 'irbtools', '~> 3.0'
   s.add_development_dependency 'warbler', '~> 0'
-  s.add_development_dependency 'ruby-maven', '~> 3.3.11'
+  s.add_development_dependency 'ruby-maven', '~> 3.3'
 end
