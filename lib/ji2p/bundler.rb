@@ -15,7 +15,7 @@ module Ji2p
       # set BUNDLE_GEMFILE ENV before requiring bundler to avoid bundler recurse and load unrelated Gemfile(s)
       ENV["BUNDLE_GEMFILE"] = Environment::GEMFILE_PATH
 
-      require "bundler"
+      require 'bundler'
 
       ::Bundler.settings.set_local(:path, Environment::BUNDLE_DIR)
       ::Bundler.settings.set_local(:without, options[:without])
@@ -53,8 +53,8 @@ module Ji2p
       # Bundler.settings[:gemfile] unlike Bundler.setup. For the sake of consistency and defensive/future proofing, let's keep it here.
       ENV["BUNDLE_GEMFILE"] = Ji2p::Environment::GEMFILE_PATH
 
-      require "bundler"
-      require "bundler/cli"
+      require 'bundler'
+      require 'bundler/cli'
 
       # force Rubygems sources to our Gemfile sources
       ::Gem.sources = ::Gem::SourceList.from(options[:rubygems_source]) if options[:rubygems_source]

@@ -6,6 +6,7 @@ PATH
       activerecord-jdbc-adapter (~> 0)
       activerecord-jdbcsqlite3-adapter (~> 0)
       activesupport (>= 4.1.11)
+      bundler (~> 2.0)
       dbd-jdbc (~> 0)
       dbi (~> 0)
       httparty (>= 0.10.0)
@@ -187,7 +188,7 @@ DEPENDENCIES
   pry (~> 0)
   rake (~> 0)
   rspec (~> 0)
-  ruby-maven (~> 3.3.11)
+  ruby-maven (~> 3.3)
   sinatra
   sinatra-contrib
   warbler (~> 0)

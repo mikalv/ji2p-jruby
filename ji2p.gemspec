@@ -17,8 +17,9 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/mikalv/ji2p'
   s.license     = 'Apache-2.0'
   s.metadata['allowed_push_host'] = 'https://rubygems.org'
-  s.platform = Gem::Platform.new 'java' #%w[jruby java universal-java-9 universal-java-10 universal-java-11]
+  s.platform = Gem::Platform.local #Gem::Platform.new %w[jruby java universal-java-9 universal-java-10 universal-java-11]
   # Runtime dependencies
+  s.add_runtime_dependency 'bundler', '~> 2.0'
   s.add_runtime_dependency 'activesupport', '>= 4.1.11'
   s.add_runtime_dependency 'httparty', '>= 0.10.0'
   s.add_runtime_dependency 'activerecord', '>= 3.0.18'
