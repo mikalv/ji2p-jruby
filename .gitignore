@@ -6,4 +6,6 @@ tmp
 lib/net/
 vendor
 .bundle
+*.jar
+*.class
 
