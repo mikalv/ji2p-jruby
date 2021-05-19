@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'activerecord-jdbcsqlite3-adapter', '~> 0'
   s.add_runtime_dependency 'dbi', '~> 0'
   s.add_runtime_dependency 'dbd-jdbc', '~> 0'
-  s.add_runtime_dependency 'puma', '~> 0'
+  s.add_runtime_dependency 'puma', '< 6'
   s.add_runtime_dependency 'jruby-rack', '~> 0'
   s.add_runtime_dependency 'rack', '~> 1.5.2'
   s.add_runtime_dependency 'jar-dependencies', '~> 0'
